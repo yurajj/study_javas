@@ -45,7 +45,7 @@ public class MethodsIfs {
                 if (time == 0 || time >= 25)
                         System.out.println("Error. End.");
                         break ;
-        
+         
 
                 
             }
