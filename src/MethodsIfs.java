@@ -7,47 +7,50 @@ public class MethodsIfs {
     // }
 
     public String todayTime (int time) {
+        String timeIs = "" ;
         try {
             // int time = 1; 
-                if (time<=12 && time>=0) {
-                    System.out.println("오전입니다.");
+                if (time<=12 && time>=1) {
+                    timeIs = "Morning." ;
                 }   
                 else if (time<=18 && time>=13) {
-                    System.out.println("오후입니다.");
+                    timeIs = "afternoon." ;
                 }   
-                else {
-                    System.out.println("밤입니다.");
+                else if (time>=19 && time<=24) {
+                    timeIs = "night." ;
                 }
         } catch (Exception e) {
             // TODO : handle exception 
         }
-        return "";
+        return timeIs ;
     }
 
 
     public static void main(String[] args) {
+
         try {
-            
-            // int day = 4;  // 1~4 가능 
-            // String str = "";
-
-            // MethodSwitchs methodSwitchs = new MethodSwitchs() ;
-            // String returnResult = methodSwitchs.today(day);
-
-            // System.out.println(returnResult);
-
-
-            int time = 0 ;
             Scanner times = new Scanner(System.in);
-            time = times.nextInt();
 
-            MethodsIfs methodsIfs = new MethodsIfs() ;
-            int returnTimes = methodsIfs.todayTime(int time);
+            while (true) {
+                System.out.println("time (1~24) : " ) ;
+                int time = times.nextInt();
 
+                MethodsIfs methodsIfs = new MethodsIfs() ;
+                String timeIs = methodsIfs.todayTime(time);
 
-            while ( timeS <)
+                System.out.println(timeIs);
+                // System.out.println("계속 하시겠습니까? (0:종료): ");
+                
+
+                if (time == 0 || time >= 25)
+                        System.out.println("Error. End.");
+                        break ;
+        
+
+                
+            }
             System.out.println() ;
-            
+            times.close();
           
 
         } catch (Exception e) {
