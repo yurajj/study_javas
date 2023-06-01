@@ -10,6 +10,8 @@ public class Scanners {
         // String userName = myObj.nextLine(); // 실제로 입력을 받는 코드 
         // System.out.println("Username is: " + userName); 
         
+        
+
         int first = 0 ;
         int second = 0 ;
         first = myObj.nextInt();
